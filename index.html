@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>Restaurantes</header>
+
+    <main>
+        <!-- Exemplo de uma seção corrigida -->
+        <section>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSeZPUVFuyRQif__mBJRp1HWFLhkKFvgiTAQ&s" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSeZPUVFuyRQif__mBJRp1HWFLhkKFvgiTAQ&s">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+
+        <section>
+            <img src="https://i.panelinha.com.br/i1/228-bk-1796-boeuf-bourguignon-foto-receita.webp" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://i.panelinha.com.br/i1/228-bk-1796-boeuf-bourguignon-foto-receita.webp">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+
+        <section>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWxLvYC90Febib18YTLWP_P9bKYtiJIEFbUQ&s" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWxLvYC90Febib18YTLWP_P9bKYtiJIEFbUQ&s">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+
+        <section>
+            <img src="https://www.comidaereceitas.com.br/wp-content/uploads/2016/04/Feijoada-deliciosa-780x520.jpg" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://www.comidaereceitas.com.br/wp-content/uploads/2016/04/Feijoada-deliciosa-780x520.jpg">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+
+        <section>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ76VKpP09roAdqCJ-xPAQBS6MtLTW-ycMbiA&s" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ76VKpP09roAdqCJ-xPAQBS6MtLTW-ycMbiA&s">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+
+        <section>
+            <img src="https://www.portalumami.com.br/app/uploads/2021/07/MOUSSAKA-659x371-1.jpg" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://www.portalumami.com.br/app/uploads/2021/07/MOUSSAKA-659x371-1.jpg">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+
+        <section>
+            <img src="https://static1.squarespace.com/static/5332f1b6e4b00ce9525b2a65/t/5643c8cbe4b0a83ded297ec8/1447285362460/IMG_3769.JPG?format=1500w" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://static1.squarespace.com/static/5332f1b6e4b00ce9525b2a65/t/5643c8cbe4b0a83ded297ec8/1447285362460/IMG_3769.JPG?format=1500w">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+
+        <section>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIiFqfTLsPftHJ3ewfT5fn-s8O2xzHTfo-8Q&s" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIiFqfTLsPftHJ3ewfT5fn-s8O2xzHTfo-8Q&s">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+
+        <section>
+            <img src="https://www.errenskitchen.com/wp-content/uploads/2019/02/Chili-con-carne-1200.jpg" alt="Imagem de um restaurante aconchegante.">
+            
+            <a href="https://www.errenskitchen.com/wp-content/uploads/2019/02/Chili-con-carne-1200.jpg">
+                <h2>Ver img maior</h2>
+            </a>
+            
+            <button onclick="lerDescricao(this)">Ouvir descrição</button>
+        </section>
+        
+        <!-- Adicione outras seções aqui seguindo o mesmo padrão -->
+        
+    </main>
+
+    <footer>Desenvolvido por Thomas Paim 3° Info</footer>
+
+    <script>
+        function lerDescricao(botao) {
+            window.speechSynthesis.cancel(); // Cancela qualquer fala em andamento
+
+            // Encontra o elemento <section> pai do botão clicado
+            const section = botao.parentElement;
+            
+            // Recupera a imagem dentro dessa seção
+            const img = section.querySelector('img');
+
+            if (img && img.alt) { // Verifica se a imagem e o atributo alt existem
+                lerTexto(img.alt);
+            } else {
+                console.error('Nenhuma descrição de imagem encontrada.');
+            }
+        }
+
+        function lerTexto(texto) {
+            const msg = new SpeechSynthesisUtterance(texto); // Corrige o erro de digitação
+            msg.lang = 'pt-BR'; // Configura o idioma para português brasileiro
+
+            window.speechSynthesis.speak(msg); // Inicia a fala
+        }
+    </script>
+</body>
+</html>
